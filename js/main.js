@@ -470,8 +470,8 @@ document.addEventListener("DOMContentLoaded", function () {
       ele.forEach(item => {
         item.classList.contains("url")
           ? fetchUrl(item.textContent).then(res => {
-              runJustifiedGallery(item, res);
-            })
+            runJustifiedGallery(item, res);
+          })
           : runJustifiedGallery(item, JSON.parse(item.textContent));
       });
     };
@@ -1811,3 +1811,8 @@ document.addEventListener("DOMContentLoaded", function () {
   refreshFn();
   unRefreshFn();
 });
+
+const addheimuTitle = function () {
+  console.log(123)
+  $('.heimu').attr('title', '你知道的太多了')
+}
